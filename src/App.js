@@ -26,7 +26,6 @@ import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import MyAccount from "./pages/myAccount";
 import Home from "./pages/home";
 import Rewards from "./pages/rewards";
-import image1 from './pages/images/pic1.jpeg'
 
 function App() {
   // declaring dispatch
