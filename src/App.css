@@ -80,3 +80,8 @@
   background: rgb(1, 135, 64);
   color:aliceblue;
 }
+.bottom-text {
+  background-color:#e9e5c5;
+  margin-top:1%;
+  padding-bottom: 1%;
+}

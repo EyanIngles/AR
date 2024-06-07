@@ -125,7 +125,7 @@ function App() {
             alt="Image Content"
           />
           <Card.Body className="card-body">
-            <Card.Text>
+            <Card.Text className="bottom-text">
               <br />
               <h5>Join Us on a Journey of Discovery</h5>
               <hr />
