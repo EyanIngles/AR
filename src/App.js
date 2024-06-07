@@ -19,12 +19,14 @@ import {
   ListGroup,
   Row,
   Form,
+  Tab, Tabs
 } from "react-bootstrap";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 
 import MyAccount from "./pages/myAccount";
 import Home from "./pages/home";
 import Rewards from "./pages/rewards";
+import image1 from './pages/images/pic1.jpeg'
 
 function App() {
   // declaring dispatch
@@ -70,6 +72,7 @@ function App() {
   }, [loadingBlockchain, account, loadBlockchain]);
 
   return (
+
     <div className="App">
       <>
         <Navbar bg="light" data-bs-theme="light">
@@ -78,11 +81,7 @@ function App() {
             <Col xs={1} md={0}>
               <Image src="" roundedCircle />
             </Col>
-            <NavbarCollapse>
               <Nav className="me-auto">
-                <Nav.Link href="/">Home</Nav.Link>
-                <Nav.Link href="/Rewards">Rewards</Nav.Link>
-                <Nav.Link href="/MyAccount">My Account</Nav.Link>
                 <InputGroup className="account">
                     {!account == 0 || !chainId == 0 ? (
                 <InputGroup.Text id="basic-addon1" className="account-wallet">
@@ -97,18 +96,33 @@ function App() {
                     )}
                 </InputGroup>
               </Nav>
-            </NavbarCollapse>
           </Container>
         </Navbar>
+        <Tabs
+      defaultActiveKey="profile"
+      id="justify-tab-example"
+      className="my-3"
+      justify
+      >
+        <Tab
+        eventKey="home"
+        title="HomePage"
+        className='nav'>
+          <Home />
+        </Tab>
+        <Tab eventKey="profile"
+        title="Buy"
+        className='nav'>
+          <MyAccount />
+        </Tab>
+        <Tab eventKey="Profile"
+        title="Mint"
+        className='nav'>
+          <Rewards />
+        </Tab>
+    </Tabs>
       </>
       <div>
-        <Router>
-          <Routes>
-            <Route path="/" element={<Home />}></Route>
-            <Route path="/MyAccount" element={<MyAccount />}></Route>
-            <Route path="/Rewards" element={<Rewards />}></Route>
-          </Routes>
-        </Router>
 
         <div className="">
           <Card.Img variant="top" />
