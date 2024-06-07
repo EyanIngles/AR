@@ -29,7 +29,5 @@ if(typeof window.ethereum !== 'undefined') {
         return account;
     } catch(err) {
         window.alert('Metamask unable to be located. Please install metamask and try again.')
-        const deadAccount = ''
-        dispatch(setAccount(deadAccount));
     }
 }}

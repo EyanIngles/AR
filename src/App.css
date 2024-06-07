@@ -36,3 +36,33 @@
     transform: rotate(360deg);
   }
 }
+.account {
+  position: absolute;
+  top:0;
+  right:0;
+}
+.buttonConnect {
+  position: absolute;
+  top:0;
+  right:0;
+  padding-right: 13px;
+  padding-top: 9px;
+}
+.account-wallet {
+  position: absolute;
+  top:0;
+  right:0;
+  margin: 2px;
+  padding: 13px;
+}
+.bottom-info {
+  padding-top: 6%;
+}
+.card-body {
+  position:relative;
+  align-items:center;
+  align-content:center;
+}
+.navbar {
+  height:fit-content;
+}
