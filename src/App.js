@@ -23,6 +23,7 @@ import MyAccount from "./pages/myAccount";
 import Home from "./pages/home";
 import Rewards from "./pages/rewards";
 import image1 from "./pages/images/pic1.jpeg";
+import image2 from './pages/images/AR LOGO.jpeg'
 
 function App() {
   // declaring dispatch
@@ -70,11 +71,11 @@ function App() {
   return (
     <div className="App">
       <>
-        <Navbar bg="light" data-bs-theme="light">
+        <Navbar bg="light" data-bs-theme="light" >
           <Container>
+          <Image src={image2} className="logo" />
             <Navbar.Brand href="/">AR</Navbar.Brand>
             <Col xs={1} md={0}>
-              <Image src="" roundedCircle />
             </Col>
             <Nav className="me-auto">
               <InputGroup className="account">
@@ -139,12 +140,17 @@ function App() {
                 receive bonus points just for signing up today! </strong>
               </p>
             </Card.Text>
+            <hr/>
           </Card.Body>
+
+        </div>
+        <div>
+
         </div>
       </div>
       <div className="socials">
-        <p>instagram: icon</p>
-        <p>tiktok: icon</p>
+      <i className="fa fa-instagram" ></i><br/>
+      <i className="fa fa-facebook" ></i>
       </div>
     </div>
   );
